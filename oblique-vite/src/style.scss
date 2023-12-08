@@ -1,0 +1,150 @@
+$primary-color: #2400FF;
+$second-color: white;
+$third-color: black;
+$font-family: Inter;
+
+body {
+    color: $primary-color;
+    padding: 0 7%;
+    font-family: $font-family;
+    margin: 0;
+    // overflow-x: hidden;
+}
+
+h2{
+    color: $primary-color;
+    font-size: 7rem;
+    font-weight: 100;
+}
+
+h3{
+    
+    color: $third-color;
+    font-size: 3rem;
+}
+
+h4{
+    font-size: 1.5rem;
+    color: $third-color;
+}
+
+a{
+    text-decoration: none;
+    color: $primary-color;
+}
+
+.Column{
+    flex-direction: column;
+}
+
+
+.Header{
+    padding: 2% 0;
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        ul{
+            display: flex;
+            list-style: none;
+            gap:2rem;
+            li{
+                text-transform: lowercase;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.Footer{
+    bottom: 0;
+    .Links{
+        display: flex;
+        height: auto;
+        gap: 1rem;
+    }
+    div{
+        height: 20vh;
+        overflow-y: hidden;
+        position: relative;
+        h2{
+            position: absolute;
+            bottom: -20%;
+            left: 50%;
+            font-size: 8rem;
+            text-align: center;
+            transform: translate(-50%, 80%);
+            white-space: nowrap;
+            span{
+                font-weight: 600;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.Hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 0;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2{
+        span{
+            font-weight: 600;
+            font-style: italic;
+        }
+    }
+    button{
+        cursor: pointer;
+        height: 6rem;
+        width: 6rem;
+        color: $primary-color;
+        background-color: $second-color;
+        border-radius: 100px;
+        border: 1.5px solid $primary-color;
+        transition: transform 250ms ease, width 250ms ease, height 250ms ease;
+        will-change: transform, width, height;
+        &:hover{
+            background-color: $primary-color;
+            color: $second-color;
+            height: 8rem;
+            width: 8rem;
+        }
+    }
+}
+
+.Content{
+    display: flex;
+    padding: 4rem 0;
+    .Description{
+        align-items: end;
+    }
+    div{
+        display: flex;
+        p{
+            font-size: 1.2rem;
+            padding: 0 7%;
+            color: $third-color;
+        }
+    }
+}
+
+.Slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .Slides {
+        width: 200vw;
+        height: 100vh;
+        display: flex;
+        gap: 4rem;
+        overflow-x: auto; 
+        // overflow-y: hidden; 
+    }
+}
