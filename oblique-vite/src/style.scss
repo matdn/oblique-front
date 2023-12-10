@@ -1,13 +1,15 @@
 $primary-color: #2400FF;
 $second-color: white;
-$third-color: black;
+$third-color: #2400FF;
 $font-family: Inter;
 
-body {
-    color: $primary-color;
-    padding: 0 7%;
+
+body {    
+    width: 100vw;
+    overflow-x: hidden;
     font-family: $font-family;
     margin: 0;
+    background-color: $primary-color;
     // overflow-x: hidden;
 }
 
@@ -37,9 +39,34 @@ a{
     flex-direction: column;
 }
 
+button{
+    cursor: pointer;
+    height: 6rem;
+    width: 6rem;
+    color: $primary-color;
+    background-color: $second-color;
+    border-radius: 100px;
+    border: 1.5px solid $primary-color;
+    transition: transform 250ms ease, width 250ms ease, height 250ms ease;
+    will-change: transform, width, height;
+    &:hover{
+        background-color: $primary-color;
+        color: $second-color;
+        height: 8rem;
+        width: 8rem;
+    }
+}
+
+// .dashedLine{
+//     height: 60%;
+//     width: 0px;
+//     border: 2px dashed $primary-color;
+//     padding: 0 !important;
+// }
 
 .Header{
-    padding: 2% 0;
+    background-color: $second-color;
+    padding: 2% 7%;
     nav{
         display: flex;
         align-items: center;
@@ -59,6 +86,8 @@ a{
 
 .Footer{
     bottom: 0;
+    background-color: $second-color;
+    padding: 0 7%;
     .Links{
         display: flex;
         height: auto;
@@ -73,7 +102,7 @@ a{
             bottom: -20%;
             left: 50%;
             font-size: 8rem;
-            text-align: center;
+            text-align: start;
             transform: translate(-50%, 80%);
             white-space: nowrap;
             span{
@@ -85,6 +114,8 @@ a{
 }
 
 .Hero{
+    background-color: $second-color;
+    padding: 0 7%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -100,51 +131,75 @@ a{
             font-style: italic;
         }
     }
-    button{
-        cursor: pointer;
-        height: 6rem;
-        width: 6rem;
-        color: $primary-color;
-        background-color: $second-color;
-        border-radius: 100px;
-        border: 1.5px solid $primary-color;
-        transition: transform 250ms ease, width 250ms ease, height 250ms ease;
-        will-change: transform, width, height;
-        &:hover{
-            background-color: $primary-color;
-            color: $second-color;
-            height: 8rem;
-            width: 8rem;
+    .HeroImg{
+        position: relative;
+        :nth-child(1){
+            position: absolute;
+            top: 10%;
+            left: -5%;
         }
     }
 }
 
 .Content{
+    background-color: $second-color;
+    padding: 2rem 7%;
     display: flex;
-    padding: 4rem 0;
-    .Description{
-        align-items: end;
+    height: 75vh;
+    .Column{
+        position: relative;
+        width: 50%;
+        .AboutImg{
+            background-image: url('../assets/About.png');
+            height: 0vh;
+            display: block;
+            width: 38vw;
+            background-position: bottom;
+            background-size: cover;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
     }
+    .Description{
+        width: 50%;
+        flex-direction: column;
+        // align-items: end;
+        justify-content: end;
+        padding: 0 7%;
+
+    }
+   
     div{
         display: flex;
         p{
-            font-size: 1.2rem;
-            padding: 0 7%;
+            font-size: 1.8rem;
             color: $third-color;
+            font-weight: 100;
+            span{
+                font-weight: 800;
+            }
         }
     }
 }
 
 .Slider{
+    background-color: $second-color;
+    padding: 8rem 7%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     .Slides {
-        width: 200vw;
-        height: 100vh;
+        height: 80vh;
         display: flex;
         gap: 4rem;
         overflow-x: auto; 
-        // overflow-y: hidden; 
+        img{
+            filter: grayscale(1);
+            &:hover{
+                filter: none;
+            }
+        }
+        
     }
 }

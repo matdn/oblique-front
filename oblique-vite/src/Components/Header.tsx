@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/logo.png'
+import logo from '../../assets/logo.png';
 export default class Header extends Component {
     render() {
         return (
@@ -11,7 +11,7 @@ export default class Header extends Component {
                     </ul>
                     <ul className='flex'>
                         <li>
-                            <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>HOME</NavLink>
+                            <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}><span>HOME</span></NavLink>
                         </li>
                         <li>
                             <NavLink to="/galerie" className={({ isActive }) => isActive ? "active-link" : ""}>GALERIE</NavLink>
