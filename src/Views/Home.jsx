@@ -9,8 +9,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
-
-
 export default class Home extends Component {
     constructor(props) {
         super(props);
@@ -24,7 +22,6 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        console.log("hello")
         this.initAnimation();  
     }
 
@@ -109,7 +106,7 @@ export default class Home extends Component {
                         </div>
                         <div className="Column">
                             <img src={Slide2} alt=""/>
-                            <h4>mars 2024</h4>
+                            <h4><span><span>mars 2024</span></span></h4>
                         </div>
                         <div className="Column">
                             <img src={Staff} alt="" />
