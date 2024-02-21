@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import HeroPict from "../../assets/heroHome.png";
-import About from "../../assets/About.png";
-import Slide1 from "../../assets/Slide1.png";
 import Slide2 from "../../assets/slide2.png";
-import Staff from "../../assets/staffOblique.png";
 import Vector from "../../assets/Vector.png"
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -101,16 +98,8 @@ export default class Home extends Component {
                     <h3>Evénements à venir</h3>
                     <div className="Slides">
                         <div className="Column">
-                            <img src={Slide1} alt=""/>
-                            <h4>decembre 2023</h4>
-                        </div>
-                        <div className="Column">
                             <img src={Slide2} alt=""/>
                             <h4><span><span>mars 2024</span></span></h4>
-                        </div>
-                        <div className="Column">
-                            <img src={Staff} alt="" />
-                            <h4>juin 2024</h4>
                         </div>
                     </div>
                 </div>

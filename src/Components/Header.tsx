@@ -14,7 +14,7 @@ export default class Header extends Component {
                             <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}><span>HOME</span></NavLink>
                         </li>
                         <li>
-                            <NavLink to="/galerie" className={({ isActive }) => isActive ? "active-link" : ""}>GALERIE</NavLink>
+                            {/* <NavLink to="/galerie" className={({ isActive }) => isActive ? "active-link" : ""}>GALERIE</NavLink> */}
                         </li>
                         <li>
                             <NavLink to="/programmation" className={({ isActive }) => isActive ? "active-link" : ""}>PROGRAMMATION</NavLink>
@@ -23,10 +23,10 @@ export default class Header extends Component {
                             <NavLink to="/billeterie" className={({ isActive }) => isActive ? "active-link" : ""}>BILLETERIE</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/login" className={({ isActive }) => isActive ? "active-link" : ""}>ESPACE ARTISTE</NavLink>
+                            {/* <NavLink to="/login" className={({ isActive }) => isActive ? "active-link" : ""}>ESPACE ARTISTE</NavLink> */}
                         </li>
                         <li>
-                            <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>À PROPOS</NavLink>
+                            <NavLink to="/a_propos" className={({ isActive }) => isActive ? "active-link" : ""}>À PROPOS</NavLink>
                         </li>
                     </ul>
                 </nav>
