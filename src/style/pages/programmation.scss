@@ -1,0 +1,91 @@
+.Programmation{
+    background-color: white;
+    padding: 0 7%;
+    header{
+        position: static;
+        margin-top: 20vh;
+        height: 30vh;
+        width: 100%;
+    }
+    nav{
+        padding: 3% 0;
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 0;
+            div{
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 2rem;
+                li{
+                    text-transform: uppercase;
+                    list-style: none;
+                    font-weight: 300;
+                    flex-wrap: nowrap;
+                    color: $primary-color;
+                }
+                .selectedEvent{
+                    color: $third-color;
+                    font-weight: 700;
+                }
+            }
+        }
+        span{
+            width: 100%;
+            height: 2px;
+            background-color: #2400FF;
+        }
+    }
+    .prog{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 20vh;
+        gap: 2rem;
+        flex-wrap: wrap;
+        .eventBackground{
+            height: 40vw;
+            object-fit: cover;
+            filter: grayscale(1);
+        }
+        img{
+            width: 100%;
+            height: auto;
+            contain: content;
+        }
+        nav{
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            li{
+                list-style: none;
+                color: #2400FF;
+            }
+            .styleTitle{
+                font-size: 1.2rem;
+            }
+            .nameTitle{
+                font-size: 2.5rem;
+            }
+            .firstElement{
+                font-size: 4rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+        .Column{
+            display: flex;
+            width: 100%;
+            div{
+                display: flex;
+                gap: 2rem;
+            }
+            .artiste{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

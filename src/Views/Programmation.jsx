@@ -1,63 +1,36 @@
 import React, { Component } from 'react';
-import BackgroundGradiant from '../../assets/gradiantBackground.png';
+import { Link } from 'react-router-dom';
 
 export default class Programmation extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: this.initialItems(), 
-            centeredIndex: null, 
-        };
-        this.navRef = React.createRef();
-        this.timeoutId = null; 
-    }
-
-    initialItems() {
-        return Array.from({ length: 4 }, (_, index) => `Item ${index + 1}`);
-    }
+    state = {
+        events: [],
+        selectedEventName: '', 
+    };
 
     componentDidMount() {
-        this.navRef.current.addEventListener('scroll', this.handleScroll);
+        this.loadEvents();
     }
 
-    componentWillUnmount() {
-        this.navRef.current.removeEventListener('scroll', this.handleScroll);
-        if (this.timeoutId) {
-            clearTimeout(this.timeoutId);
-        }
-    }
+    loadEvents = () => {
+        fetch('/festival_events.json')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ 
+                    events: data.events,
+                    selectedEventName: data.events[0]?.name,
+                })
+            })
+            .catch(error => console.error("Error loading the events:", error));
+    };
 
-    handleScroll = () => {
-        if (this.timeoutId) {
-            clearTimeout(this.timeoutId);
-            this.setState({ centeredIndex: null });
-        }
-
-        this.timeoutId = setTimeout(() => {
-            const navElement = this.navRef.current;
-            const centerPosition = navElement.scrollTop + (navElement.offsetHeight / 2);
-            let closestIndex = null;
-            let closestDistance = Infinity;
-
-            this.state.items.forEach((_, index) => {
-                const ulElement = navElement.children[index];
-                const ulCenterPosition = ulElement.offsetTop + (ulElement.offsetHeight / 2);
-                const distance = Math.abs(ulCenterPosition - centerPosition);
-                
-                if (distance < closestDistance) {
-                    closestDistance = distance;
-                    closestIndex = index;
-                }
-            });
-
-            this.setState({ centeredIndex: closestIndex }, () => {
-                this.timeoutId = setTimeout(() => {
-                }, 500); 
-            });
-        }, 100);
-    }
+    selectEvent = (name) => {
+        this.setState({ selectedEventName: name });
+    };
 
     render() {
+        const { events, selectedEventName } = this.state;
+        const selectedEvent = events.find(event => event.name === selectedEventName);
+
         return (
             <div className='Programmation'>
                 <header className='Header'>
@@ -67,27 +40,35 @@ export default class Programmation extends Component {
                 <nav>
                     <ul>
                         <span></span>
-                            <div>
-                                {/* <li>Décembre 2023</li> */}
-                                <li>mars 2024</li>
-                                {/* <li>juin 2024</li> */}
-                                {/* <li>Décembre 2024</li> */}
-                            </div>
+                        <div>
+                            {events.map(event => (
+                                <li  className={event.name === selectedEventName ? 'selectedEvent' : ''} key={event.name} onClick={() => this.selectEvent(event.name)}>
+                                    {event.name + " (" + event.month + ")"}
+                                </li>
+                            ))}
+                        </div>
                         <span/>
                     </ul>
                 </nav>
                 <div className="prog">
-                    <div className="img">
-                        <img src={BackgroundGradiant} alt="" />
-                    </div>
-                    <nav ref={this.navRef} style={{overflowY: 'auto', maxHeight: '600px'}}>
-                        {this.state.items.map((item, index) => (
-                            <ul key={index} className={this.state.centeredIndex === index ? 'centered' : ''}>
-                                <li className='styleTitle'>DANCE</li>
-                                <li className='nameTitle'>{item}</li>
-                            </ul>
-                        ))}
-                    </nav>
+                    {selectedEvent && ( 
+                        <div key={selectedEvent.name} className="Column">
+                            <h4><span><span>{selectedEvent.name}</span></span></h4>
+                            <img className="eventBackground" src={selectedEvent.image_path} alt={selectedEvent.name}/>
+                            <p>{selectedEvent.description}</p>
+                            <h4>Artists</h4>
+                            <div>
+                            {selectedEvent.artists.map(artist => (
+                                <Link to={`/artiste/${artist.id}`} key={artist.first_name + artist.last_name} className="artiste">
+                                    <div className="artiste" key={artist.first_name + artist.last_name}>
+                                        <img src={artist.photo_path} alt={`${artist.first_name} ${artist.last_name}`}/>
+                                        <p>{artist.first_name} {artist.last_name} - {artist.art_style}</p>
+                                    </div>
+                                </Link>
+                            ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         );

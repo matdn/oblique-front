@@ -1,0 +1,43 @@
+{
+    "events": [
+        {
+            "name": "Spring Sounds",
+            "month": "April",
+            "description": "A celebration of emerging sounds and vibrant performances, featuring a blend of genres from indie to electronic.",
+            "image_path": "assets/events/eventExempleBackground.png",
+            "artists": [
+                {
+                    "id" : "GREENM",
+                    "first_name": "Miles",
+                    "last_name": "Green",
+                    "art_style": "Jazz",
+                    "photo_path": "assets/artists/matta.png",
+                    "description": " "
+                },
+                {
+                    "id" : "GAERTM",
+                    "first_name": "Mathias",
+                    "last_name": "Gaert",
+                    "art_style": "Jazz",
+                    "photo_path": "assets/artists/matta.png",
+                    "description": " "
+                },
+                {
+                    "id" : "DENEM",
+                    "first_name": "Matis",
+                    "last_name": "DENE",
+                    "art_style": "Jazz",
+                    "photo_path": "assets/artists/matta.png",
+                    "description": " "
+                },
+                {
+                    "id" : "CHENZ",
+                    "first_name": "Zoe",
+                    "last_name": "Chen",
+                    "art_style": "Jazz",
+                    "photo_path": "assets/artists/matta.png"
+                }
+            ]
+        }
+    ]
+}

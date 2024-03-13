@@ -13,24 +13,40 @@ export default class Home extends Component {
         this.sliderRef = React.createRef();
         this.buttonRef = React.createRef();
         this.state = {
+            events: [],
             x: 0,
             y: 0,
         };
     }
 
     componentDidMount() {
-        this.initAnimation();  
+        this.loadEvents();
     }
 
+    loadEvents = () => {
+        fetch('/festival_events.json')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ 
+                    events: data.events,
+                    selectedEventName: data.events[0]?.name,
+                })
+            })
+            .catch(error => console.error("Error loading the events:", error));
+    };
+    
+
     handleMouseMove = (event) => {
-        const button = this.buttonRef.current;
-        if (button) {
-            const rect = button.getBoundingClientRect();
-            const x = event.clientX - rect.left - rect.width / 2;
-            const y = event.clientY - rect.top - rect.height / 2;
-            this.setState({ x, y });
+        const slider = this.sliderRef.current;
+        if (slider) {
+            const rect = slider.getBoundingClientRect();
+            const x = event.clientX - rect.left; 
+            const xRatio = x / rect.width;
+            const scrollAmount = xRatio * (slider.scrollWidth - rect.width);
+            slider.scrollLeft = scrollAmount;
         }
     };
+
 
     handleMouseLeave = () => {
         if (this.leaveTimeout) clearTimeout(this.leaveTimeout);
@@ -39,20 +55,9 @@ export default class Home extends Component {
         }, 100);
     };
 
-    initAnimation() {
-        gsap.to(".AboutImg", {
-            height: "60vh",
-            scrollTrigger: {
-                trigger: ".Content",
-                start: "top-=150",
-                end: "top+=150",
-                // markers: true,
-                scrub: true,
-            }
-        });
-    }
     render() {
         const { x, y } = this.state;
+        const { events } = this.state;
         const moveStyle = {
             transform: `translate(${x}px, ${y}px)`,
         };
@@ -79,27 +84,30 @@ export default class Home extends Component {
                         <img src={HeroPict} alt=""/>
                     </div>
                 </div>
-                <div className="Content">
-                    <div className="Column">
-                        {/* <h3>About us</h3> */}
-                        <div className="AboutImg"></div>
-                    </div>
-                    <div className="Description">
-                        {/* <div className="dashedLine"></div> */}
-                        <p>
-                            <span>Oblique</span> est un festival <span>d’arts vivants</span>{" "}
-                            qui aspire à faire émerger{" "}
-                            <span>la parole des jeunes</span> par l’art, soutenu
-                            par Emmanuel Demarcy Mota et Frédérique Aït-Touati.
-                        </p>
-                    </div>
-                </div>
-                <div className="Slider Content Column">
-                    <h3>Evénements à venir</h3>
-                    <div className="Slides">
+                <div className="HomeInfos">
+                    <div className="Content">
+                    <h3>About us</h3>
                         <div className="Column">
-                            <img src={Slide2} alt=""/>
-                            <h4><span><span>mars 2024</span></span></h4>
+                            <div className="AboutImg"></div>
+                        </div>
+                        <div className="Description">
+                            <p>
+                                <span>Oblique</span> est un festival <span>d’arts vivants</span>{" "}
+                                qui aspire à faire émerger{" "}
+                                <span>la parole des jeunes</span> par l’art, soutenu
+                                par Emmanuel Demarcy Mota et Frédérique Aït-Touati.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="Slider Content Column" >
+                        <h3>Evénements à venir</h3>
+                        <div className="Slides">
+                            {events.map(event => (
+                                <div key={event.name} className="Column">
+                                    <img src={event.image_path} alt={event.name}/>
+                                    <h4><span><span>{event.name}</span></span></h4>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

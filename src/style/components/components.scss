@@ -1,0 +1,93 @@
+$primary-color: #2400FF;
+$second-color: white;
+$third-color: black;
+$font-family: Inter;
+
+
+body {    
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: $font-family;
+    margin: 0;
+}
+
+h2{
+    color: $primary-color;
+    font-size: 6rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+h3{
+    color: $third-color;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+h4{
+    font-size: 1.5rem;
+    color: $third-color;
+}
+
+a{
+    text-decoration: none;
+    color: $primary-color;
+}
+
+.Header{
+    background-color: $second-color;
+    height: 12vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0% 7%;
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap:1rem;
+            li{
+                text-transform: lowercase;
+                font-weight: 300;
+                font-size: 1.2rem;
+                a{
+                    color: #2400FF;
+                }
+            }
+        }
+    }
+}
+
+.Footer{
+    bottom: 0;
+    background-color: $second-color;
+    padding: 0 7%;
+    .Links{
+        display: flex;
+        height: auto;
+        gap: 1rem;
+    }
+    div{
+        height: 20vh;
+        overflow-y: hidden;
+        position: relative;
+        h2{
+            position: absolute;
+            bottom: -20%;
+            left: 50%;
+            font-size: 8rem;
+            text-align: start;
+            transform: translate(-50%, 80%);
+            white-space: nowrap;
+            span{
+                font-weight: 600;
+                font-style: italic;
+            }
+        }
+    }
+}

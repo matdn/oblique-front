@@ -1,0 +1,64 @@
+{
+    "events": [
+        {
+            "name": "Spring Sounds",
+            "month": "April",
+            "description": "A celebration of emerging sounds and vibrant performances, featuring a blend of genres from indie to electronic.",
+            "image_path": "assets/images/spring_sounds.jpg",
+            "artists": [
+                {
+                    "first_name": "Elena",
+                    "last_name": "Morris",
+                    "art_style": "Singing",
+                    "photo_path": "assets/artists/matta.png"
+                },
+                {
+                    "first_name": "Raj",
+                    "last_name": "Patel",
+                    "art_style": "Dance",
+                    "photo_path": "assets/artists/matta.png"
+                }
+            ]
+        },
+        {
+            "name": "Theater Under the Stars",
+            "month": "June",
+            "description": "An open-air theater experience showcasing classical plays and modern adaptations under the summer sky.",
+            "image_path": "assets/images/theater_under_stars.jpg",
+            "artists": [
+                {
+                    "first_name": "Laura",
+                    "last_name": "Gibson",
+                    "art_style": "Theatre",
+                    "photo_path": "assets/artists/matta.png"
+                },
+                {
+                    "first_name": "Sam",
+                    "last_name": "O'Neil",
+                    "art_style": "Theatre",
+                    "photo_path": "assets/artists/matta.png"
+                }
+            ]
+        },
+        {
+            "name": "Autumn Jazz Nights",
+            "month": "October",
+            "description": "A cozy evening of jazz performances, celebrating the rich history and evolving sound of jazz music.",
+            "image_path": "assets/images/autumn_jazz_nights.jpg",
+            "artists": [
+                {
+                    "first_name": "Miles",
+                    "last_name": "Green",
+                    "art_style": "Jazz",
+                    "photo_path": "assets/artists/matta.png"
+                },
+                {
+                    "first_name": "Zoe",
+                    "last_name": "Chen",
+                    "art_style": "Jazz",
+                    "photo_path": "assets/artists/matta.png"
+                }
+            ]
+        }
+    ]
+}
