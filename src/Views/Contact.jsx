@@ -22,7 +22,7 @@ export default class Contact extends Component {
                     </header>
                 </div>
                 <div className='image'>
-                    <img className="flower" src="../assets/flower.png"/>
+                    <img className="flower" src="/assets/flower.png"/>
                     <div className="background"/>
                 </div>
             </div>
