@@ -4,7 +4,7 @@ export default class AboutUs extends Component {
     render() {
     return (
         <div className='AboutUs'>
-            <h2>à propos <span>oblique</span></h2>
+            <h2>à propos de <span>oblique</span></h2>
             <p><span><span>oblique</span></span> est un festival d’arts vivants qui aspire à faire émerger la parole des jeunesses par l’art, soutenu par Emmanuel Demarcy Mota et Frédérique Aït-Touati.</p>
             <h4>Raison d’existence</h4> 
             <p>    

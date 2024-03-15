@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 export default class Billeterie extends Component {
     
-
     render() {
         return (
             <div className='Billeterie'>
@@ -13,7 +12,7 @@ export default class Billeterie extends Component {
                     <ul>
                         <span></span>
                             <div>
-                                <li>mars 2024</li>
+                                <li>mai 2024</li>
                             </div>
                         <span/>
                     </ul>

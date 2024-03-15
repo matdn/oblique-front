@@ -1,0 +1,17 @@
+.AboutUs{
+    padding: 7% 14% 7% 7%;
+    p{
+        color: $primary-color;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        font-weight: 300;
+        span{
+            font-weight: 800;
+            text-transform: capitalize;
+            font-style: italic;
+        }
+    }
+    h4{
+        color: $primary-color;
+    }
+}

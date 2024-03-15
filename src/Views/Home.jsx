@@ -4,6 +4,7 @@ import Slide2 from "../../assets/slide2.png";
 import Vector from "../../assets/Vector.png"
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from "react-router-dom";
 
 
 export default class Home extends Component {
@@ -103,10 +104,13 @@ export default class Home extends Component {
                         <h3>Evénements à venir</h3>
                         <div className="Slides">
                             {events.map(event => (
-                                <div key={event.name} className="Column">
-                                    <img src={event.image_path} alt={event.name}/>
-                                    <h4><span><span>{event.name}</span></span></h4>
-                                </div>
+                                <Link to={`/programmation`}>
+                                    <div key={event.name} className="Column">
+                                        <img src={event.image_path} alt={event.name}/>
+                                        <h4><span><span>{event.name}</span></span></h4>
+                                    </div>
+                                </Link>
+                                
                             ))}
                         </div>
                     </div>

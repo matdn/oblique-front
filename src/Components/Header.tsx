@@ -28,6 +28,9 @@ export default class Header extends Component {
                         <li>
                             <NavLink to="/a_propos" className={({ isActive }) => isActive ? "active-link" : ""}>À PROPOS</NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/contact" className={({ isActive }) => isActive ? "active-link" : ""}>CONTACT</NavLink>
+                        </li>
                     </ul>
                 </nav>
             </div>

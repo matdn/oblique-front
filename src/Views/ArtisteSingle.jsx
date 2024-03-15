@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 const ArtisteSingle = () => {
     const [artiste, setArtiste] = useState(null);
     const { id } = useParams(); 
-
+   
     useEffect(() => {
         const loadArtistData = (artisteId) => {
             fetch('/festival_events.json')
@@ -22,12 +22,12 @@ const ArtisteSingle = () => {
     }, [id]); 
 
     if (!artiste) return <div>Loading artist...</div>;
-
     return (
-        <div>
+        <div className='ArtisteSingle'>
             <h2>{artiste.first_name} {artiste.last_name}</h2>
-            <p>Style: {artiste.art_style}</p>
-            <img src={artiste.photo_path} alt={`${artiste.first_name} ${artiste.last_name}`} />
+            <p>{artiste.art_style}</p>
+            <img src={"/"+artiste.photo_path} alt={`${artiste.first_name} ${artiste.last_name}`} />
+            <p className='bio'>Bio : {artiste.description}</p>
         </div>
     );
 };

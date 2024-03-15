@@ -57,15 +57,15 @@ export default class Programmation extends Component {
                             <img className="eventBackground" src={selectedEvent.image_path} alt={selectedEvent.name}/>
                             <p>{selectedEvent.description}</p>
                             <h4>Artists</h4>
-                            <div>
-                            {selectedEvent.artists.map(artist => (
-                                <Link to={`/artiste/${artist.id}`} key={artist.first_name + artist.last_name} className="artiste">
-                                    <div className="artiste" key={artist.first_name + artist.last_name}>
-                                        <img src={artist.photo_path} alt={`${artist.first_name} ${artist.last_name}`}/>
-                                        <p>{artist.first_name} {artist.last_name} - {artist.art_style}</p>
-                                    </div>
-                                </Link>
-                            ))}
+                            <div className='artistes'>
+                                {selectedEvent.artists.map(artist => (
+                                    <Link to={`/artiste/${artist.id}`} key={artist.first_name + artist.last_name} className="artiste">
+                                        <div className="artiste" key={artist.first_name + artist.last_name}>
+                                            <img src={artist.photo_path} alt={`${artist.first_name} ${artist.last_name}`}/>
+                                            <p>{artist.first_name} {artist.last_name} - {artist.art_style}</p>
+                                        </div>
+                                    </Link>
+                                ))}
                             </div>
                         </div>
                     )}
