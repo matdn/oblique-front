@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import HeroPict from "../../assets/heroHome.png";
-import Slide2 from "../../assets/slide2.png";
-import Vector from "../../assets/Vector.png"
+import HeroPict from "/assets/heroHome.png";
+import Vector from "/assets/Vector.png"
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from "react-router-dom";

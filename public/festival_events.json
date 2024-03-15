@@ -11,7 +11,7 @@
                     "first_name": "OLYMPE",
                     "last_name": "4000",
                     "art_style": "TECHNO",
-                    "photo_path": "assets/artists/olympe4000.png",
+                    "photo_path": "/assets/artists/olympe4000.png",
                     "description": "Solide étoile montante de la scène française, Olympe4000 est inarrêtable. C’est l’adrenaline quality, l’exploration du spectre rave qui casse les normes et fusionne les styles, de l’ancien et du nouveau dans une atmosphère hybride personnelle et communicative entre techno, electro, trance et bass music. Une approche du mix débridée et sans complexes qui s’accompagne d’un engagement politique certain. Olympe4000 se révèle et écume rapidement les clubs réputés de France et d’Europe, décroche une résidence dans l’emblématique Badaboum à Paris, côtoie les plus grands dans les festivals, et démontre son talent sur des radios comme HÖR (Berlin) ou Rinse France. Début 2023, Olympe4000 lance son propre label au nom tout trouvé : Adrenaline Quality. À la fois engagement politique, conscience sociale et volonté de fer de se lancer en autodidacte, Olympe4000 défend le choix de l’indépendance sans l’isolement. Cette nouvelle plateforme créative sera dédiée aux musiques électroniques débridées et inclusives, aux artistes émergent.es et aux producteur.ices utopistes, aux nouvelles et anciennes sonorités de club. Adrenaline Quality, c’est l’exploration des fusions de rythmes électroniques, des textures organiques, d’une hybridation de styles, le fer de lance d’un renouveau et d’un décloisonnement assumé des ambiances rave."
                 },
                 {
@@ -19,7 +19,7 @@
                     "first_name": "Bjarki",
                     "last_name": "",
                     "art_style": "TECHNO",
-                    "photo_path": "assets/artists/bjarki.png",
+                    "photo_path": "/assets/artists/bjarki.png",
                     "description": " Le producteur a fait une entrée fracassante sur la scène internationale en sortant en 2016, trois albums sur ᴛрип, label de Nina Kraviz, qui suffisent à l’établir comme un ovni, insaisissable, surdoué et mystérieux. Extrêmement productif, il a sorti en 7 ans d’activités une somme impressionnante d’EPs et de LPs, aussi bien sur des labels acclamés (!K7) que sur ses propres écuries, bbbbbb recors et Hellcat Industries qu’il a co-fondé avec VTSS. Entre, techno, hardcore et IDM, la qualité de sa production fait de lui un artiste extrêmement respecté, également très à l’aise dans l’exercice du remix, autant de sommités de l’électronique (Autechre, Aphex Twin) que de figures plus inattendues (Manu Chao). Rare en live comme en dj-set, Bjarki fait fi des codes musicaux et fonce dans une direction qu’il est le seul à prendre."
                 },
                 {
@@ -27,7 +27,7 @@
                     "first_name": "Matha",
                     "last_name": "",
                     "art_style": "TRANCE",
-                    "photo_path": "assets/artists/matha.png",
+                    "photo_path": "/assets/artists/matha.png",
                     "description": " "
                 },
                 {
@@ -35,7 +35,7 @@
                     "first_name": "Matta",
                     "last_name": "",
                     "art_style": "GROOVE",
-                    "photo_path": "assets/artists/matta.png"
+                    "photo_path": "/assets/artists/matta.png"
                 }
             ]
         }
