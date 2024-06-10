@@ -194,3 +194,46 @@
     z-index: 5;
     position: relative;
 }
+
+@media screen and (max-width: 768px) {
+    .Hero{
+        flex-direction: column;
+        height: 100vh;
+        h2{
+            font-size: 2rem;
+        }
+        .HeroImg{
+            :nth-child(1){
+                position: absolute;
+                top: 10%;
+                left: -5%;
+            }
+        }
+        button{
+            display: none;
+        }
+        .HeroImg{
+            display: none !important;
+        }
+    }
+    .Content{
+        .Column{
+            .AboutImg{
+                width: 100%;
+            }
+        }
+        .Description{
+            p{
+                font-size: 1.2rem !important;
+            }
+        }
+    }
+    .Slider{
+        height: 50dvh !important;
+        .Slides {
+            img{
+                width: 70vw !important;
+            }
+        }
+    }
+}

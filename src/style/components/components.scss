@@ -46,6 +46,7 @@ a{
         align-items: center;
         justify-content: space-between;
         padding: 0 7%;
+        position: relative;
         ul{
             display: flex;
             justify-content: center;
@@ -91,4 +92,108 @@ a{
             }
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    .Header{
+        img{
+            width: 60%;
+        }
+        .link{
+            display: none;
+        }
+        .cross-menu{
+            width: 0;
+            display: none;
+            position: absolute;
+            top: 2rem;
+            right: 4rem;
+           span{
+                background-color: $second-color;
+                height: 0.2rem;
+                width: 2rem;
+                transform: rotate(45deg);
+                display: block;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    height: 0.2rem;
+                    width: 2rem;
+                    background-color: $second-color;
+                    transform: rotate(-90deg);
+                }
+           }
+        }
+        .burger-menu{
+            display: block;
+            width: 3rem;
+            height: 100%;
+            span{
+                background-color: $primary-color;
+                display: block;
+                height: 0.2rem;
+                width: 2rem;
+                position: relative;
+                &:after, &:before{
+                    content: '';
+                    position: absolute;
+                    height: 0.2rem;
+                    width: 2rem;
+                    background-color: $primary-color;
+                }
+                &:before{
+                    top: -0.6rem;
+                }
+                &:after{
+                    top: 0.6rem;
+                }
+            }
+           
+        }
+       
+    }
+    .Header nav ul{
+        justify-content: flex-start;
+    }
+    .active{
+        img{
+            display: none;
+        }
+        nav{
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #2400FF;
+            .link{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 2rem;
+                font-size: 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: center;        
+                a{
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .logo{
+            display: none;
+        }
+        .burger-menu{
+            display: none;
+        }
+        .cross-menu{
+            display: block;
+        }
+    }
+    .Footer{
+        div{
+            height: 10vh;
+        }
+    }
+
 }

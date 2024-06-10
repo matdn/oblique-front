@@ -100,3 +100,37 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .Header{
+        h2{
+            font-size: 2.5rem;
+        }
+        h4{
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+    .ArtisteSingle {
+        p {
+        font-size: 1rem !important;
+        line-height: 1.5rem !important;
+        font-style: italic;
+        }
+        img{
+            height: 100vw !important;
+        }
+    }
+    .artistes{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .artiste{
+            img{
+                width: 100% !important;
+                height: auto;
+                height: 35dvh !important;
+            }
+        }
+    }
+}

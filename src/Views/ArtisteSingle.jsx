@@ -26,7 +26,7 @@ const ArtisteSingle = () => {
         <div className='ArtisteSingle'>
             <h2>{artiste.first_name} {artiste.last_name}</h2>
             <p>{artiste.art_style}</p>
-            <img src={"/"+artiste.photo_path} alt={`${artiste.first_name} ${artiste.last_name}`} />
+            <img src={artiste.photo_path} alt={`${artiste.first_name} ${artiste.last_name}`} />
             <p className='bio'>Bio : {artiste.description}</p>
         </div>
     );
