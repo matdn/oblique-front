@@ -68,12 +68,15 @@
 }
 
 @media screen and (max-width: 768px) {
-    .Header{
-        height: 10dvh !important;
-        padding: 0 !important;
+    .Billeterie{
         h2{
             padding: 0 7% !important;
         }
+    }
+    .Header{
+        height: auto !important;
+        padding: 0 !important;
+        
     }
     .content{
         h3{
